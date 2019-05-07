@@ -61,7 +61,7 @@ def extract_image(headers, http_payload):
     return image, image_type
 def face_detect(path, file_name):
     img = cv2.imread(path)
-    cascade = cv2.CascadeClassifier(os.system('echo $HOME') + 'Desktop/haarcascade_upperbody.xml')
+    cascade = cv2.CascadeClassifier(os.system('echo $HOME') + '/Desktop/haarcascade_upperbody.xml')
     rects = cascade.detectMultiScale(img, 1.3, 4, cv2.cv.CV_HAAR_SCALE_IMAGE, (20,20))
     if len(rects) == 0:
         return False
